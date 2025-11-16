@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Songs - Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <style>
+        .download-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .download-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .download-header h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .download-header p {
+            color: #a1a1a1;
+            font-size: 18px;
+        }
+
+        .download-list {
+            background-color: #181818;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .download-list::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        .download-list::-webkit-scrollbar-track {
+            background: #282828;
+            border-radius: 10px;
+        }
+        
+        .download-list::-webkit-scrollbar-thumb {
+            background: #535353;
+            border-radius: 10px;
+        }
+        
+        .download-list::-webkit-scrollbar-thumb:hover {
+            background: #727272;
+        }
+
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            background-color: #282828;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-item:hover {
+            background-color: #3e3e3e;
+        }
+
+        .song-details {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .song-number {
+            color: #a1a1a1;
+            font-size: 16px;
+            min-width: 30px;
+        }
+
+        .song-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #1ed760;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .song-name {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .download-btn {
+            background-color: #1ed760;
+            color: black;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #1fdf64;
+            transform: scale(1.05);
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        .download-btn.downloading {
+            background-color: #535353;
+            cursor: not-allowed;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #282828;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #3e3e3e;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Back to Player
+    </button>
+
+    <div class="download-container">
+        <div class="download-header">
+            <h1>Download Songs</h1>
+            <p>Download your favorite songs to listen offline</p>
+        </div>
+
+        <div class="download-list" id="downloadList">
+            <!-- Songs will be populated here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="download.js"></script>
+</body>
+</html>

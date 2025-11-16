@@ -50,10 +50,10 @@
 							/>
 						</div>
 					</li>
-					<li>Premium</li>
-					<li>Support</li>
-					<li>Download</li>
-					<li style="display: flex; align-items: center; gap: 8px">
+					<li><a href="premium.html" style="text-decoration: none; color: inherit;">Premium</a></li>
+					<li><a href="support.html" style="text-decoration: none; color: inherit;">Support</a></li>
+					<li><a href="download.html" style="text-decoration: none; color: inherit;">Download</a></li>
+					<li style="display: flex; align-items: center; gap: 8px; cursor: pointer;" onclick="alert('Install App feature coming soon!')">
 						<img
 							src="download.svg"
 							class="invert"
@@ -63,9 +63,10 @@
 						/>
 						<span>Install App</span>
 					</li>
-					<li>Sign up</li>
+					<li><a href="signup.html" style="text-decoration: none; color: inherit;">Sign up</a></li>
 					<li>
 						<button
+							onclick="window.location.href='login.html'"
 							style="
 								border-radius: 20px;
 								justify-content: center;
@@ -73,6 +74,7 @@
 								margin: 10px;
 								padding: 10px;
 								width: 90px;
+								cursor: pointer;
 							"
 						>
 							Log in
@@ -227,17 +229,17 @@
 
 				<div class="playbar">
 					<div class="nk">
-						<div class="songinfo"></div>
+						<div class="songinfo">No song playing</div>
 						<div class="playbutton invert">
 							<img id="previous" src="previous.svg" alt="Previous" />
 							<img id="play" src="play.svg" alt="Play" />
 							<img id="next" src="next.svg" alt="Next" />
 						</div>
-						<div class="time"></div>
+						<div class="time">00:00 / 00:00</div>
 					</div>
 					<div class="seekbar">
-            <div class="circle"></div>
-          </div>
+						<div class="circle"></div>
+					</div>
 				</div>
 			</div>
 		</div>

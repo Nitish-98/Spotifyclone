@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium - Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <style>
+        .premium-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .premium-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .premium-header h1 {
+            color: white;
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .premium-header p {
+            color: #a1a1a1;
+            font-size: 20px;
+        }
+
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .plan-card {
+            background: linear-gradient(135deg, #1ed760 0%, #1db954 100%);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-card h2 {
+            color: black;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            color: black;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .plan-features li {
+            color: black;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .subscribe-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #282828;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #3e3e3e;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Back to Player
+    </button>
+
+    <div class="premium-container">
+        <div class="premium-header">
+            <h1>Get Premium</h1>
+            <p>Unlock unlimited music, ad-free listening, and offline playback</p>
+        </div>
+
+        <div class="plans-container">
+            <div class="plan-card">
+                <h2>Individual</h2>
+                <div class="plan-price">$9.99</div>
+                <p style="color: black;">per month</p>
+                <ul class="plan-features">
+                    <li>Ad-free music</li>
+                    <li>Download songs</li>
+                    <li>Play anywhere</li>
+                    <li>High quality audio</li>
+                </ul>
+                <button class="subscribe-btn">Get Premium</button>
+            </div>
+
+            <div class="plan-card">
+                <h2>Family</h2>
+                <div class="plan-price">$14.99</div>
+                <p style="color: black;">per month</p>
+                <ul class="plan-features">
+                    <li>Up to 6 accounts</li>
+                    <li>Ad-free music</li>
+                    <li>Download songs</li>
+                    <li>Family Mix playlist</li>
+                </ul>
+                <button class="subscribe-btn">Get Premium</button>
+            </div>
+
+            <div class="plan-card">
+                <h2>Student</h2>
+                <div class="plan-price">$4.99</div>
+                <p style="color: black;">per month</p>
+                <ul class="plan-features">
+                    <li>Discount for students</li>
+                    <li>Ad-free music</li>
+                    <li>Download songs</li>
+                    <li>High quality audio</li>
+                </ul>
+                <button class="subscribe-btn">Get Premium</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

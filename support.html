@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support - Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <style>
+        .support-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .support-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .support-header h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .support-header p {
+            color: #a1a1a1;
+            font-size: 18px;
+        }
+
+        .search-support {
+            background-color: #282828;
+            border-radius: 30px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+
+        .search-support input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background-color: #181818;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #282828;
+        }
+
+        .faq-question h3 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: #a1a1a1;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .contact-section {
+            background-color: #181818;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            background-color: #1ed760;
+            color: black;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .contact-btn:hover {
+            background-color: #1fdf64;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #282828;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #3e3e3e;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Back to Player
+    </button>
+
+    <div class="support-container">
+        <div class="support-header">
+            <h1>How can we help?</h1>
+            <p>Get answers to your questions</p>
+        </div>
+
+        <div class="search-support">
+            <span>🔍</span>
+            <input type="text" placeholder="Search for help..." />
+        </div>
+
+        <div class="faq-section">
+            <h2 style="color: white; margin-bottom: 20px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How do I download songs?</h3>
+                    <span style="color: white;">+</span>
+                </div>
+                <div class="faq-answer">
+                    Click on the "Download" option in the navigation bar to access the download page. From there, you can download any song by clicking the download button next to it.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How do I search for songs?</h3>
+                    <span style="color: white;">+</span>
+                </div>
+                <div class="faq-answer">
+                    Use the search bar at the top of the page. Type the song name and the library will filter in real-time to show matching results.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>What are the Premium benefits?</h3>
+                    <span style="color: white;">+</span>
+                </div>
+                <div class="faq-answer">
+                    Premium includes ad-free listening, offline downloads, high-quality audio, and the ability to play any song on demand.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>How do I control playback?</h3>
+                    <span style="color: white;">+</span>
+                </div>
+                <div class="faq-answer">
+                    Use the playbar at the bottom of the screen. You can play/pause, skip to next/previous songs, and seek through the current track by clicking on the progress bar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h3>Can I create playlists?</h3>
+                    <span style="color: white;">+</span>
+                </div>
+                <div class="faq-answer">
+                    Currently, you can browse and play songs from the library. Playlist creation features are coming soon!
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Still need help?</h2>
+            <p style="color: #a1a1a1; margin-bottom: 30px;">Our support team is here for you</p>
+            <button class="contact-btn">Chat with us</button>
+            <button class="contact-btn">Email support</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-question span').textContent = '+';
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+                element.querySelector('span').textContent = '−';
+            }
+        }
+    </script>
+</body>
+</html>
